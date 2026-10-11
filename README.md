@@ -8,6 +8,8 @@ This is a first local implementation. Codex is the first adapter; Claude Code is
 
 The live learning task improved from **11/16 to 16/16** fixed checks. The 18 fresh-session transfer trials passed **6/6 in every condition**, so this fixture did **not** demonstrate an incremental procedural-memory benefit. See the [measured transfer report](docs/evidence/transfer-report.md) and [structured proof evidence](docs/evidence/proof-results.json).
 
+Watch the [one-minute narrated evidence replay](docs/evidence/thread-demo.mp4), with [captions](docs/evidence/thread-demo.vtt). It shows the recorded results; Obsidian visual testing remains incomplete.
+
 ## Start locally
 
 Requires Python 3.9+, Git, Obsidian desktop, and an installed/authenticated Codex CLI. No Node build step is needed for the plugin.

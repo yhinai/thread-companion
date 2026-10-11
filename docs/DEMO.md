@@ -22,6 +22,8 @@ This is the narrowed hackathon story. A memory graph alone does not demonstrate 
 
 ![Completed real learning run persisted in Atlas](evidence/atlas-learning.jpg)
 
+The [one-minute narrated evidence replay](evidence/thread-demo.mp4) summarizes these actual results, with [captions](evidence/thread-demo.vtt). It uses synthetic narration and evidence frames, including the real Atlas screenshot. It is explicitly labeled as an evidence replay and does not present an unverified Obsidian interaction as live footage.
+
 ## Prerequisites
 
 Use a local terminal with Python 3.9+, Git, an authenticated Codex CLI, and Obsidian desktop. Run commands from this repository. The original development session denied localhost listeners and Codex app-server startup; the receiving session successfully ran both.
