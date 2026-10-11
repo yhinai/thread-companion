@@ -1,0 +1,33 @@
+.thread-view { padding: 24px 18px; --thread-accent: #a8bc9c; }
+.thread-header h2 { font-size: 26px; letter-spacing: -.8px; margin: 9px 0; font-weight: 550; }
+.thread-eyebrow { font-size: 10px; font-weight: 650; letter-spacing: 1.8px; color: var(--text-muted); }
+.thread-muted, .thread-footer, .thread-run-summary { color: var(--text-muted); font-size: 12px; line-height: 1.65; }
+.thread-connection { font-size: 11px; color: var(--text-muted); border-top: 1px solid var(--background-modifier-border); padding-top: 16px; margin: 24px 0 12px; }
+.thread-error { color: var(--text-error); }
+.thread-project-bar select { width: 100%; }
+.thread-actions { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin: 15px 0 24px; }
+.thread-actions button { padding: 6px 4px; box-shadow: none; font-size: 12px; }
+.thread-goal { padding: 16px; border-left: 2px solid var(--thread-accent); background: var(--background-secondary); border-radius: 0 8px 8px 0; margin-bottom: 24px; }
+.thread-goal p { margin: 8px 0 0; font-size: 13px; line-height: 1.65; }
+.thread-card { padding: 16px 0; border-bottom: 1px solid var(--background-modifier-border); }
+.thread-card h4 { margin: 12px 0 8px; font-size: 14px; line-height: 1.5; }
+.thread-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.thread-card-top small, .thread-memory-row small { color: var(--text-faint); font-size: 10px; }
+.thread-status { text-transform: capitalize; color: var(--text-muted); font-size: 11px; }
+.thread-status.is-running, .thread-status.is-complete { color: var(--thread-accent); }
+.thread-status.is-failed { color: var(--text-error); }
+.thread-inline-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.thread-inline-actions button, .thread-footer button { background: transparent; box-shadow: none; font-size: 11px; color: var(--text-muted); padding: 3px 6px; }
+.thread-question { border: 1px solid var(--background-modifier-border); border-radius: 8px; padding: 16px; margin-bottom: 18px; }
+.thread-question textarea, .thread-task-input { display: block; width: 100%; min-height: 90px; margin: 14px 0; resize: vertical; }
+.thread-memory { margin: 24px 0; font-size: 12px; }
+.thread-memory-row { padding: 12px 0; border-bottom: 1px solid var(--background-modifier-border); }
+.thread-memory-row strong, .thread-memory-row small { display: block; margin-top: 5px; }
+.thread-memory-row p { color: var(--text-muted); font-size: 11px; }
+.thread-tag { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--thread-accent); }
+.thread-footer { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.thread-empty { padding: 24px 0; color: var(--text-muted); line-height: 1.7; }
+.thread-evidence { margin: 12px 0; }
+.thread-results { width: 100%; font-size: 12px; border-collapse: collapse; }
+.thread-results th, .thread-results td { text-align: left; padding: 8px 4px; border-bottom: 1px solid var(--background-modifier-border); }
+.thread-evidence pre { white-space: pre-wrap; word-break: break-word; max-height: 500px; overflow: auto; font-size: 11px; }

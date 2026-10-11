@@ -1,0 +1,1748 @@
+{
+  "backend": "mongodb-atlas",
+  "project_id": "63287e88a03e401e96fbb72262360baf",
+  "atlas_connection": {
+    "checked_at": "2026-10-11T22:01:34.537411+00:00",
+    "connected": true,
+    "database": "thread",
+    "read_write_verified": true
+  },
+  "baseline": {
+    "passed": 11,
+    "total": 16
+  },
+  "historical_procedure": {
+    "origin": "explicitly seeded demonstration data",
+    "status": "stale"
+  },
+  "learning": {
+    "run_id": "13730d8c8c134bad82d9ac07dc819081",
+    "status": "complete",
+    "summary": "Approved: active_tasks follows the current Task state decision with a small, dependency-free change.",
+    "acceptance": [
+      {
+        "operation": "active",
+        "policy": "canonical",
+        "passed": 16,
+        "total": 16,
+        "success": true,
+        "cases": [
+          {
+            "case": 0,
+            "passed": true
+          },
+          {
+            "case": 1,
+            "passed": true
+          },
+          {
+            "case": 2,
+            "passed": true
+          },
+          {
+            "case": 3,
+            "passed": true
+          },
+          {
+            "case": 4,
+            "passed": true
+          },
+          {
+            "case": 5,
+            "passed": true
+          },
+          {
+            "case": 6,
+            "passed": true
+          },
+          {
+            "case": 7,
+            "passed": true
+          },
+          {
+            "case": 8,
+            "passed": true
+          },
+          {
+            "case": 9,
+            "passed": true
+          },
+          {
+            "case": 10,
+            "passed": true
+          },
+          {
+            "case": 11,
+            "passed": true
+          },
+          {
+            "case": 12,
+            "passed": true
+          },
+          {
+            "case": 13,
+            "passed": true
+          },
+          {
+            "case": 14,
+            "passed": true
+          },
+          {
+            "case": 15,
+            "passed": true
+          }
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "id": "98b848f70ea7028b096e012262a496a611ec82ce3cd940c59b1b4e97b94828bd",
+        "title": "Review task state against the current decision",
+        "content": "Translate the current decision into explicit complete and active cases. Include normalization, missing values, and nonempty false strings. Verify operation results and preserved interface behavior, then compare against baseline. Reuse the procedure for each subsequent operation.",
+        "version": 1,
+        "status": "validated"
+      }
+    ]
+  },
+  "transfer": {
+    "evaluation_id": "a927c4b1a2ee42468f63d25855d1caf0",
+    "status": "complete",
+    "model": "inherited Codex configuration",
+    "base_commit": "fb719381b6c588f191e11a7b9715583b2145b24b",
+    "grader_sha256": "d19045b5b830dfc4c160d2fcf572c55e8568db3796f5381a467c9faf9b8c78b3",
+    "seed": 17,
+    "protocol": "one fresh agent invocation per arm/task/repeat; same repository commit and task prompt; token use measured, not equalized",
+    "summary": {
+      "no_memory": {
+        "passed": 6,
+        "total": 6,
+        "seconds": 142.14,
+        "input_tokens": 447414,
+        "output_tokens": 4151,
+        "usage_reported": 6
+      },
+      "current_notes": {
+        "passed": 6,
+        "total": 6,
+        "seconds": 175.97,
+        "input_tokens": 518258,
+        "output_tokens": 5522,
+        "usage_reported": 6
+      },
+      "notes_and_skill": {
+        "passed": 6,
+        "total": 6,
+        "seconds": 180.62,
+        "input_tokens": 522308,
+        "output_tokens": 5371,
+        "usage_reported": 6
+      }
+    },
+    "trials": [
+      {
+        "task": "summary",
+        "repeat": 2,
+        "arm": "current_notes",
+        "seconds": 28.25,
+        "usage": {
+          "input_tokens": 89422,
+          "cached_input_tokens": 70016,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 903,
+          "reasoning_output_tokens": 53
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "summary",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "96a6f67198738ab31fcdbaf0da3262531e559dd2273aced1d6e7e66a13278ec0"
+      },
+      {
+        "task": "summary",
+        "repeat": 2,
+        "arm": "no_memory",
+        "seconds": 19.33,
+        "usage": {
+          "input_tokens": 68165,
+          "cached_input_tokens": 49920,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 536,
+          "reasoning_output_tokens": 43
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "summary",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "4d4e816ff36b78da2bedecbed11d90b4c77e38e537e5894d86214ca8367a0773"
+      },
+      {
+        "task": "export",
+        "repeat": 2,
+        "arm": "no_memory",
+        "seconds": 32.66,
+        "usage": {
+          "input_tokens": 87215,
+          "cached_input_tokens": 68096,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1064,
+          "reasoning_output_tokens": 0
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "export",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "9e55e0dc71d62e8dbc403ff91125d6d2303739e4230cc8304b2e381904184278"
+      },
+      {
+        "task": "export",
+        "repeat": 1,
+        "arm": "no_memory",
+        "seconds": 18.79,
+        "usage": {
+          "input_tokens": 68904,
+          "cached_input_tokens": 50304,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 678,
+          "reasoning_output_tokens": 0
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "export",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "9e55e0dc71d62e8dbc403ff91125d6d2303739e4230cc8304b2e381904184278"
+      },
+      {
+        "task": "export",
+        "repeat": 1,
+        "arm": "notes_and_skill",
+        "seconds": 28.1,
+        "usage": {
+          "input_tokens": 71525,
+          "cached_input_tokens": 52224,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 757,
+          "reasoning_output_tokens": 0
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "export",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "e1e8321cbe05a59709b5275e3328fa3755c18ae87cb86243bc06c65b7341d1e2"
+      },
+      {
+        "task": "summary",
+        "repeat": 1,
+        "arm": "no_memory",
+        "seconds": 25.49,
+        "usage": {
+          "input_tokens": 85952,
+          "cached_input_tokens": 67328,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 675,
+          "reasoning_output_tokens": 47
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "summary",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "4d4e816ff36b78da2bedecbed11d90b4c77e38e537e5894d86214ca8367a0773"
+      },
+      {
+        "task": "export",
+        "repeat": 0,
+        "arm": "current_notes",
+        "seconds": 28.78,
+        "usage": {
+          "input_tokens": 89898,
+          "cached_input_tokens": 70144,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1107,
+          "reasoning_output_tokens": 0
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "export",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "89c7d904c7d3dd719f2b2e1bb64141c78129c001b5ea3f4e186776790eb063e4"
+      },
+      {
+        "task": "summary",
+        "repeat": 0,
+        "arm": "no_memory",
+        "seconds": 23.41,
+        "usage": {
+          "input_tokens": 68384,
+          "cached_input_tokens": 50048,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 500,
+          "reasoning_output_tokens": 15
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "summary",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "4d4e816ff36b78da2bedecbed11d90b4c77e38e537e5894d86214ca8367a0773"
+      },
+      {
+        "task": "summary",
+        "repeat": 0,
+        "arm": "current_notes",
+        "seconds": 31.8,
+        "usage": {
+          "input_tokens": 89204,
+          "cached_input_tokens": 69888,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 874,
+          "reasoning_output_tokens": 80
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "summary",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "96a6f67198738ab31fcdbaf0da3262531e559dd2273aced1d6e7e66a13278ec0"
+      },
+      {
+        "task": "export",
+        "repeat": 2,
+        "arm": "notes_and_skill",
+        "seconds": 28.68,
+        "usage": {
+          "input_tokens": 71739,
+          "cached_input_tokens": 52352,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 812,
+          "reasoning_output_tokens": 0
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "export",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "e1e8321cbe05a59709b5275e3328fa3755c18ae87cb86243bc06c65b7341d1e2"
+      },
+      {
+        "task": "summary",
+        "repeat": 2,
+        "arm": "notes_and_skill",
+        "seconds": 29.0,
+        "usage": {
+          "input_tokens": 126544,
+          "cached_input_tokens": 106496,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 871,
+          "reasoning_output_tokens": 42
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "summary",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "8e76ea0a30eeccbaf1da4f86fd7d29946fb65c3721e2afd52aa33231b5d00557"
+      },
+      {
+        "task": "export",
+        "repeat": 0,
+        "arm": "notes_and_skill",
+        "seconds": 33.38,
+        "usage": {
+          "input_tokens": 90758,
+          "cached_input_tokens": 70784,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1124,
+          "reasoning_output_tokens": 0
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "export",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "e1e8321cbe05a59709b5275e3328fa3755c18ae87cb86243bc06c65b7341d1e2"
+      },
+      {
+        "task": "summary",
+        "repeat": 0,
+        "arm": "notes_and_skill",
+        "seconds": 35.63,
+        "usage": {
+          "input_tokens": 90299,
+          "cached_input_tokens": 70656,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1045,
+          "reasoning_output_tokens": 49
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "summary",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "8e76ea0a30eeccbaf1da4f86fd7d29946fb65c3721e2afd52aa33231b5d00557"
+      },
+      {
+        "task": "summary",
+        "repeat": 1,
+        "arm": "current_notes",
+        "seconds": 25.51,
+        "usage": {
+          "input_tokens": 70535,
+          "cached_input_tokens": 34176,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 628,
+          "reasoning_output_tokens": 66
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "summary",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "96a6f67198738ab31fcdbaf0da3262531e559dd2273aced1d6e7e66a13278ec0"
+      },
+      {
+        "task": "summary",
+        "repeat": 1,
+        "arm": "notes_and_skill",
+        "seconds": 25.83,
+        "usage": {
+          "input_tokens": 71443,
+          "cached_input_tokens": 52224,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 762,
+          "reasoning_output_tokens": 85
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "summary",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "8e76ea0a30eeccbaf1da4f86fd7d29946fb65c3721e2afd52aa33231b5d00557"
+      },
+      {
+        "task": "export",
+        "repeat": 0,
+        "arm": "no_memory",
+        "seconds": 22.46,
+        "usage": {
+          "input_tokens": 68794,
+          "cached_input_tokens": 50176,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 698,
+          "reasoning_output_tokens": 0
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "export",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "9e55e0dc71d62e8dbc403ff91125d6d2303739e4230cc8304b2e381904184278"
+      },
+      {
+        "task": "export",
+        "repeat": 1,
+        "arm": "current_notes",
+        "seconds": 31.17,
+        "usage": {
+          "input_tokens": 89854,
+          "cached_input_tokens": 65792,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1116,
+          "reasoning_output_tokens": 0
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "export",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "89c7d904c7d3dd719f2b2e1bb64141c78129c001b5ea3f4e186776790eb063e4"
+      },
+      {
+        "task": "export",
+        "repeat": 2,
+        "arm": "current_notes",
+        "seconds": 30.46,
+        "usage": {
+          "input_tokens": 89345,
+          "cached_input_tokens": 70016,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 894,
+          "reasoning_output_tokens": 0
+        },
+        "integrity": true,
+        "grade": {
+          "operation": "export",
+          "policy": "canonical",
+          "passed": 16,
+          "total": 16,
+          "success": true,
+          "cases": [
+            {
+              "case": 0,
+              "passed": true
+            },
+            {
+              "case": 1,
+              "passed": true
+            },
+            {
+              "case": 2,
+              "passed": true
+            },
+            {
+              "case": 3,
+              "passed": true
+            },
+            {
+              "case": 4,
+              "passed": true
+            },
+            {
+              "case": 5,
+              "passed": true
+            },
+            {
+              "case": 6,
+              "passed": true
+            },
+            {
+              "case": 7,
+              "passed": true
+            },
+            {
+              "case": 8,
+              "passed": true
+            },
+            {
+              "case": 9,
+              "passed": true
+            },
+            {
+              "case": 10,
+              "passed": true
+            },
+            {
+              "case": 11,
+              "passed": true
+            },
+            {
+              "case": 12,
+              "passed": true
+            },
+            {
+              "case": 13,
+              "passed": true
+            },
+            {
+              "case": 14,
+              "passed": true
+            },
+            {
+              "case": 15,
+              "passed": true
+            }
+          ]
+        },
+        "success": true,
+        "prompt_sha256": "89c7d904c7d3dd719f2b2e1bb64141c78129c001b5ea3f4e186776790eb063e4"
+      }
+    ]
+  },
+  "interpretation": "All three conditions passed 6/6 tasks. No incremental procedural-memory benefit was demonstrated in this fixture.",
+  "ui": "Obsidian installed and plugin configured; visual verification incomplete because application-control requests timed out."
+}

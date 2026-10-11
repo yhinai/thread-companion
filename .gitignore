@@ -1,0 +1,11 @@
+.thread/
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+.DS_Store
+# Private conversation records stay in the local workspace.
+/SESSION_HANDOFF.md
+/PROJECT_PLAN.md

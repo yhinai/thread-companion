@@ -1,0 +1,9 @@
+{
+  "id": "thread-companion",
+  "name": "Thread Companion",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Turn project knowledge into direction, experiments, and reusable lessons for your coding agent.",
+  "author": "Thread",
+  "isDesktopOnly": true
+}
