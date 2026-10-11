@@ -13,7 +13,7 @@ This is the narrowed hackathon story. A memory graph alone does not demonstrate 
 - A seeded historical procedure satisfies the original task-state contract.
 - Changing the decision invalidates that procedure and excludes it from new context.
 - The unchanged implementation fails 5 of 16 fixed checks under the new contract.
-- All 24 automated tests pass in the receiving local session, including the three localhost integration tests. Tests use explicit agent doubles; they do not establish model performance.
+- All 26 automated tests pass in the receiving local session, including the three localhost integration tests. Tests use explicit agent doubles; they do not establish model performance.
 - The Atlas-backed real Codex learning run completed, passed the external checks, received independent approval, and retained a validated procedure. Its manifest is `.thread/atlas-proof/manifest.json`. Fresh-session transfer evaluation is recorded separately and must be interpreted from its actual report.
 - Atlas ping and a retained diagnostic insert/readback passed on October 11, 2026. The organizer Sandbox configuration remains private in `.env`; the credential-free report is `.thread/atlas-connection.json`.
 - Verified the installed plugin in Obsidian 1.14.4 using its official CLI after native app control timed out. The panel connects to Atlas and displays the existing project, stale procedure exclusion, and all 18 transfer results. Brief completed through the plugin; Open note and Evidence worked; no captured errors. [Actual screenshot](evidence/obsidian-proof.png).
@@ -23,6 +23,14 @@ This is the narrowed hackathon story. A memory graph alone does not demonstrate 
 ![Completed real learning run persisted in Atlas](evidence/atlas-learning.jpg)
 
 The [one-minute narrated evidence replay](evidence/thread-demo.mp4) summarizes these actual results, with [captions](evidence/thread-demo.vtt). It uses synthetic narration and evidence frames, including the real Atlas screenshot. It is explicitly labeled as an evidence replay. Its statement about pending Obsidian visual testing reflects the recording time; the subsequent UI verification is documented above.
+
+## Stronger follow-up and current recording
+
+The [isolated comparison](evidence/isolated-report.md) uses a new one-commit repository with unimplemented operations and no prior completion interpreter. It retains the original tasks, grader, and learned procedure; no test-specific lesson was added. Its 18 fresh sessions scored no memory **0/6**, current notes **6/6**, and notes plus learned procedure **6/6**. The no-memory condition lacks project requirements, so this measures requirement access. The notes conditions remain tied; procedural lift is unproven. Both comparisons remain published, with [allowlisted trial records](evidence/isolated-results.json) and a [frozen protocol](evidence/isolated-protocol.md).
+
+Use the [current one-minute Obsidian walkthrough](evidence/thread-obsidian-demo.mp4), with [captions](evidence/thread-obsidian-demo.vtt), for submission review. It consists of authentic Obsidian screenshots with synthetic narration; it is not an unedited live screen recording. It shows authored intent, the seeded historical procedure's exclusion after a decision change, real 16/16 acceptance and independent approval, a readable Brief with source links, and both completed comparisons.
+
+The strongest supported pitch is persistent project intent with safe invalidation and verified experimentation. A general recursive-improvement or first-place claim is not supported by these small fixtures.
 
 ## Prerequisites
 
@@ -107,6 +115,10 @@ After standalone commands finish:
 ```
 
 Open `.thread/atlas-proof/fixture/vault` as an Obsidian vault, enable Thread Companion under Community plugins, and copy the local token from `.thread/atlas-proof/runtime/token` into Thread settings. Open Thread and select the existing “Field Notes — learning proof” project. Do not reconnect it as a new project.
+
+If the folder picker hides `.thread`, press Command–Shift–G and paste the absolute vault path. Brief prepares readable context with source links; Copy brief carries it into an existing coding session. Review, Explore, and Build start agent work explicitly. Evidence shows acceptance results and why each memory was selected.
+
+The harness also rechecks source revisions before promotion. A decision edited while an experiment is running prevents the candidate from being applied, even if its checks passed; the integration test exercises this case.
 
 The panel shows authored intent, run evidence, stale procedures with source dependencies, and actual transfer counts. The “Codex installed” label only detects the executable; it does not certify successful model execution. “Atlas connected” verifies the selected backend, not organizer provenance.
 

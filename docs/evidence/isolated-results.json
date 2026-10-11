@@ -1,0 +1,1831 @@
+{
+  "id": "4f274eaccf284695a64ea57d7f52a04e",
+  "project_id": "63287e88a03e401e96fbb72262360baf",
+  "status": "complete",
+  "created_at": "2026-10-11T23:01:36.621893+00:00",
+  "backend": "mongodb-atlas",
+  "adapter": "codex",
+  "model": "inherited Codex configuration",
+  "base_commit": "2e0dba4e5e3ffd6e02311d659a41d8715462865d",
+  "fixture": "isolated_unimplemented",
+  "seed": 17,
+  "repeats": 3,
+  "grader_sha256": "d19045b5b830dfc4c160d2fcf572c55e8568db3796f5381a467c9faf9b8c78b3",
+  "protocol": "one fresh agent invocation per arm/task/repeat; same repository commit and task prompt; token use measured, not equalized",
+  "summary": {
+    "no_memory": {
+      "passed": 0,
+      "total": 6,
+      "seconds": 281.16,
+      "input_tokens": 616033,
+      "output_tokens": 3190,
+      "usage_reported": 6
+    },
+    "current_notes": {
+      "passed": 6,
+      "total": 6,
+      "seconds": 172.89,
+      "input_tokens": 462662,
+      "output_tokens": 5605,
+      "usage_reported": 6
+    },
+    "notes_and_skill": {
+      "passed": 6,
+      "total": 6,
+      "seconds": 182.83,
+      "input_tokens": 428065,
+      "output_tokens": 5501,
+      "usage_reported": 6
+    }
+  },
+  "trials": [
+    {
+      "id": "de3e86f0a6854e38bbdd843616578b0d",
+      "task": "summary",
+      "repeat": 2,
+      "arm": "current_notes",
+      "prompt_sha256": "96a6f67198738ab31fcdbaf0da3262531e559dd2273aced1d6e7e66a13278ec0",
+      "memory_ids": [
+        "f71a249b7e1050bb9f342fe20b0d81356046890da042045c529f069de650bc7e",
+        "ceb8e2dfe2938e302221326c753541b07ba5eeb5e8ece5fed5b4ce5ff3e92620",
+        "41250755b29cc850ab6dd17d84823a07f2f933e4a09737c08a9d84d5121eba47"
+      ],
+      "seconds": 29.74,
+      "usage": {
+        "input_tokens": 70748,
+        "cached_input_tokens": 51584,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 845,
+        "reasoning_output_tokens": 150
+      },
+      "grade": {
+        "operation": "summary",
+        "policy": "canonical",
+        "passed": 16,
+        "total": 16,
+        "success": true,
+        "cases": [
+          {
+            "case": 0,
+            "passed": true
+          },
+          {
+            "case": 1,
+            "passed": true
+          },
+          {
+            "case": 2,
+            "passed": true
+          },
+          {
+            "case": 3,
+            "passed": true
+          },
+          {
+            "case": 4,
+            "passed": true
+          },
+          {
+            "case": 5,
+            "passed": true
+          },
+          {
+            "case": 6,
+            "passed": true
+          },
+          {
+            "case": 7,
+            "passed": true
+          },
+          {
+            "case": 8,
+            "passed": true
+          },
+          {
+            "case": 9,
+            "passed": true
+          },
+          {
+            "case": 10,
+            "passed": true
+          },
+          {
+            "case": 11,
+            "passed": true
+          },
+          {
+            "case": 12,
+            "passed": true
+          },
+          {
+            "case": 13,
+            "passed": true
+          },
+          {
+            "case": 14,
+            "passed": true
+          },
+          {
+            "case": 15,
+            "passed": true
+          }
+        ]
+      },
+      "integrity": true,
+      "success": true
+    },
+    {
+      "id": "fefd5d5813a14f28a0dcda9fee7dfabe",
+      "task": "summary",
+      "repeat": 2,
+      "arm": "no_memory",
+      "prompt_sha256": "4d4e816ff36b78da2bedecbed11d90b4c77e38e537e5894d86214ca8367a0773",
+      "memory_ids": [],
+      "seconds": 81.26,
+      "usage": {
+        "input_tokens": 102227,
+        "cached_input_tokens": 83968,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 456,
+        "reasoning_output_tokens": 90
+      },
+      "grade": {
+        "operation": "summary",
+        "policy": "canonical",
+        "passed": 0,
+        "total": 16,
+        "success": false,
+        "cases": [
+          {
+            "case": 0,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 1,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 2,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 3,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 4,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 5,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 6,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 7,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 8,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 9,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 10,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 11,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 12,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 13,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 14,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 15,
+            "passed": false,
+            "error": "NotImplementedError"
+          }
+        ]
+      },
+      "integrity": true,
+      "success": false
+    },
+    {
+      "id": "5ab9941b7afe48809569afeb34f27013",
+      "task": "export",
+      "repeat": 2,
+      "arm": "no_memory",
+      "prompt_sha256": "9e55e0dc71d62e8dbc403ff91125d6d2303739e4230cc8304b2e381904184278",
+      "memory_ids": [],
+      "seconds": 88.54,
+      "usage": {
+        "input_tokens": 102737,
+        "cached_input_tokens": 97536,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 551,
+        "reasoning_output_tokens": 187
+      },
+      "grade": {
+        "operation": "export",
+        "policy": "canonical",
+        "passed": 0,
+        "total": 16,
+        "success": false,
+        "cases": [
+          {
+            "case": 0,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 1,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 2,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 3,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 4,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 5,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 6,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 7,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 8,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 9,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 10,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 11,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 12,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 13,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 14,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 15,
+            "passed": false,
+            "error": "NotImplementedError"
+          }
+        ]
+      },
+      "integrity": true,
+      "success": false
+    },
+    {
+      "id": "eecd8f360c864cd8b50ec7a587d7d22a",
+      "task": "export",
+      "repeat": 1,
+      "arm": "no_memory",
+      "prompt_sha256": "9e55e0dc71d62e8dbc403ff91125d6d2303739e4230cc8304b2e381904184278",
+      "memory_ids": [],
+      "seconds": 40.68,
+      "usage": {
+        "input_tokens": 138100,
+        "cached_input_tokens": 132224,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 830,
+        "reasoning_output_tokens": 222
+      },
+      "grade": {
+        "operation": "export",
+        "policy": "canonical",
+        "passed": 0,
+        "total": 16,
+        "success": false,
+        "cases": [
+          {
+            "case": 0,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 1,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 2,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 3,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 4,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 5,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 6,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 7,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 8,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 9,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 10,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 11,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 12,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 13,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 14,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 15,
+            "passed": false,
+            "error": "NotImplementedError"
+          }
+        ]
+      },
+      "integrity": true,
+      "success": false
+    },
+    {
+      "id": "6e9b91bf9dd0408085cb9b66e4366584",
+      "task": "export",
+      "repeat": 1,
+      "arm": "notes_and_skill",
+      "prompt_sha256": "e1e8321cbe05a59709b5275e3328fa3755c18ae87cb86243bc06c65b7341d1e2",
+      "memory_ids": [
+        "f71a249b7e1050bb9f342fe20b0d81356046890da042045c529f069de650bc7e",
+        "98b848f70ea7028b096e012262a496a611ec82ce3cd940c59b1b4e97b94828bd",
+        "ceb8e2dfe2938e302221326c753541b07ba5eeb5e8ece5fed5b4ce5ff3e92620",
+        "41250755b29cc850ab6dd17d84823a07f2f933e4a09737c08a9d84d5121eba47"
+      ],
+      "seconds": 29.35,
+      "usage": {
+        "input_tokens": 71501,
+        "cached_input_tokens": 65408,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 937,
+        "reasoning_output_tokens": 91
+      },
+      "grade": {
+        "operation": "export",
+        "policy": "canonical",
+        "passed": 16,
+        "total": 16,
+        "success": true,
+        "cases": [
+          {
+            "case": 0,
+            "passed": true
+          },
+          {
+            "case": 1,
+            "passed": true
+          },
+          {
+            "case": 2,
+            "passed": true
+          },
+          {
+            "case": 3,
+            "passed": true
+          },
+          {
+            "case": 4,
+            "passed": true
+          },
+          {
+            "case": 5,
+            "passed": true
+          },
+          {
+            "case": 6,
+            "passed": true
+          },
+          {
+            "case": 7,
+            "passed": true
+          },
+          {
+            "case": 8,
+            "passed": true
+          },
+          {
+            "case": 9,
+            "passed": true
+          },
+          {
+            "case": 10,
+            "passed": true
+          },
+          {
+            "case": 11,
+            "passed": true
+          },
+          {
+            "case": 12,
+            "passed": true
+          },
+          {
+            "case": 13,
+            "passed": true
+          },
+          {
+            "case": 14,
+            "passed": true
+          },
+          {
+            "case": 15,
+            "passed": true
+          }
+        ]
+      },
+      "integrity": true,
+      "success": true
+    },
+    {
+      "id": "5a6e0dc67c184aab85deac34753a407f",
+      "task": "summary",
+      "repeat": 1,
+      "arm": "no_memory",
+      "prompt_sha256": "4d4e816ff36b78da2bedecbed11d90b4c77e38e537e5894d86214ca8367a0773",
+      "memory_ids": [],
+      "seconds": 19.29,
+      "usage": {
+        "input_tokens": 85141,
+        "cached_input_tokens": 80128,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 421,
+        "reasoning_output_tokens": 116
+      },
+      "grade": {
+        "operation": "summary",
+        "policy": "canonical",
+        "passed": 0,
+        "total": 16,
+        "success": false,
+        "cases": [
+          {
+            "case": 0,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 1,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 2,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 3,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 4,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 5,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 6,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 7,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 8,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 9,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 10,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 11,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 12,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 13,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 14,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 15,
+            "passed": false,
+            "error": "NotImplementedError"
+          }
+        ]
+      },
+      "integrity": true,
+      "success": false
+    },
+    {
+      "id": "f74769263e5144e6b3d14c5ac9f5e98d",
+      "task": "export",
+      "repeat": 0,
+      "arm": "current_notes",
+      "prompt_sha256": "89c7d904c7d3dd719f2b2e1bb64141c78129c001b5ea3f4e186776790eb063e4",
+      "memory_ids": [
+        "f71a249b7e1050bb9f342fe20b0d81356046890da042045c529f069de650bc7e",
+        "ceb8e2dfe2938e302221326c753541b07ba5eeb5e8ece5fed5b4ce5ff3e92620",
+        "41250755b29cc850ab6dd17d84823a07f2f933e4a09737c08a9d84d5121eba47"
+      ],
+      "seconds": 25.83,
+      "usage": {
+        "input_tokens": 70900,
+        "cached_input_tokens": 51840,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 833,
+        "reasoning_output_tokens": 94
+      },
+      "grade": {
+        "operation": "export",
+        "policy": "canonical",
+        "passed": 16,
+        "total": 16,
+        "success": true,
+        "cases": [
+          {
+            "case": 0,
+            "passed": true
+          },
+          {
+            "case": 1,
+            "passed": true
+          },
+          {
+            "case": 2,
+            "passed": true
+          },
+          {
+            "case": 3,
+            "passed": true
+          },
+          {
+            "case": 4,
+            "passed": true
+          },
+          {
+            "case": 5,
+            "passed": true
+          },
+          {
+            "case": 6,
+            "passed": true
+          },
+          {
+            "case": 7,
+            "passed": true
+          },
+          {
+            "case": 8,
+            "passed": true
+          },
+          {
+            "case": 9,
+            "passed": true
+          },
+          {
+            "case": 10,
+            "passed": true
+          },
+          {
+            "case": 11,
+            "passed": true
+          },
+          {
+            "case": 12,
+            "passed": true
+          },
+          {
+            "case": 13,
+            "passed": true
+          },
+          {
+            "case": 14,
+            "passed": true
+          },
+          {
+            "case": 15,
+            "passed": true
+          }
+        ]
+      },
+      "integrity": true,
+      "success": true
+    },
+    {
+      "id": "20979bc306a94680977bac39c8e2b1bc",
+      "task": "summary",
+      "repeat": 0,
+      "arm": "no_memory",
+      "prompt_sha256": "4d4e816ff36b78da2bedecbed11d90b4c77e38e537e5894d86214ca8367a0773",
+      "memory_ids": [],
+      "seconds": 21.85,
+      "usage": {
+        "input_tokens": 85152,
+        "cached_input_tokens": 67072,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 395,
+        "reasoning_output_tokens": 108
+      },
+      "grade": {
+        "operation": "summary",
+        "policy": "canonical",
+        "passed": 0,
+        "total": 16,
+        "success": false,
+        "cases": [
+          {
+            "case": 0,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 1,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 2,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 3,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 4,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 5,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 6,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 7,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 8,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 9,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 10,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 11,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 12,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 13,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 14,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 15,
+            "passed": false,
+            "error": "NotImplementedError"
+          }
+        ]
+      },
+      "integrity": true,
+      "success": false
+    },
+    {
+      "id": "671e111b05d84dfeb620f2bcd768f746",
+      "task": "summary",
+      "repeat": 0,
+      "arm": "current_notes",
+      "prompt_sha256": "96a6f67198738ab31fcdbaf0da3262531e559dd2273aced1d6e7e66a13278ec0",
+      "memory_ids": [
+        "f71a249b7e1050bb9f342fe20b0d81356046890da042045c529f069de650bc7e",
+        "ceb8e2dfe2938e302221326c753541b07ba5eeb5e8ece5fed5b4ce5ff3e92620",
+        "41250755b29cc850ab6dd17d84823a07f2f933e4a09737c08a9d84d5121eba47"
+      ],
+      "seconds": 26.36,
+      "usage": {
+        "input_tokens": 70638,
+        "cached_input_tokens": 51584,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 773,
+        "reasoning_output_tokens": 78
+      },
+      "grade": {
+        "operation": "summary",
+        "policy": "canonical",
+        "passed": 16,
+        "total": 16,
+        "success": true,
+        "cases": [
+          {
+            "case": 0,
+            "passed": true
+          },
+          {
+            "case": 1,
+            "passed": true
+          },
+          {
+            "case": 2,
+            "passed": true
+          },
+          {
+            "case": 3,
+            "passed": true
+          },
+          {
+            "case": 4,
+            "passed": true
+          },
+          {
+            "case": 5,
+            "passed": true
+          },
+          {
+            "case": 6,
+            "passed": true
+          },
+          {
+            "case": 7,
+            "passed": true
+          },
+          {
+            "case": 8,
+            "passed": true
+          },
+          {
+            "case": 9,
+            "passed": true
+          },
+          {
+            "case": 10,
+            "passed": true
+          },
+          {
+            "case": 11,
+            "passed": true
+          },
+          {
+            "case": 12,
+            "passed": true
+          },
+          {
+            "case": 13,
+            "passed": true
+          },
+          {
+            "case": 14,
+            "passed": true
+          },
+          {
+            "case": 15,
+            "passed": true
+          }
+        ]
+      },
+      "integrity": true,
+      "success": true
+    },
+    {
+      "id": "92d324a956b140e3a8a31a93c6777e26",
+      "task": "export",
+      "repeat": 2,
+      "arm": "notes_and_skill",
+      "prompt_sha256": "e1e8321cbe05a59709b5275e3328fa3755c18ae87cb86243bc06c65b7341d1e2",
+      "memory_ids": [
+        "f71a249b7e1050bb9f342fe20b0d81356046890da042045c529f069de650bc7e",
+        "98b848f70ea7028b096e012262a496a611ec82ce3cd940c59b1b4e97b94828bd",
+        "ceb8e2dfe2938e302221326c753541b07ba5eeb5e8ece5fed5b4ce5ff3e92620",
+        "41250755b29cc850ab6dd17d84823a07f2f933e4a09737c08a9d84d5121eba47"
+      ],
+      "seconds": 28.62,
+      "usage": {
+        "input_tokens": 71527,
+        "cached_input_tokens": 65408,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 947,
+        "reasoning_output_tokens": 109
+      },
+      "grade": {
+        "operation": "export",
+        "policy": "canonical",
+        "passed": 16,
+        "total": 16,
+        "success": true,
+        "cases": [
+          {
+            "case": 0,
+            "passed": true
+          },
+          {
+            "case": 1,
+            "passed": true
+          },
+          {
+            "case": 2,
+            "passed": true
+          },
+          {
+            "case": 3,
+            "passed": true
+          },
+          {
+            "case": 4,
+            "passed": true
+          },
+          {
+            "case": 5,
+            "passed": true
+          },
+          {
+            "case": 6,
+            "passed": true
+          },
+          {
+            "case": 7,
+            "passed": true
+          },
+          {
+            "case": 8,
+            "passed": true
+          },
+          {
+            "case": 9,
+            "passed": true
+          },
+          {
+            "case": 10,
+            "passed": true
+          },
+          {
+            "case": 11,
+            "passed": true
+          },
+          {
+            "case": 12,
+            "passed": true
+          },
+          {
+            "case": 13,
+            "passed": true
+          },
+          {
+            "case": 14,
+            "passed": true
+          },
+          {
+            "case": 15,
+            "passed": true
+          }
+        ]
+      },
+      "integrity": true,
+      "success": true
+    },
+    {
+      "id": "fd55c91c6fe9404ebc5a5d50278416ae",
+      "task": "summary",
+      "repeat": 2,
+      "arm": "notes_and_skill",
+      "prompt_sha256": "8e76ea0a30eeccbaf1da4f86fd7d29946fb65c3721e2afd52aa33231b5d00557",
+      "memory_ids": [
+        "f71a249b7e1050bb9f342fe20b0d81356046890da042045c529f069de650bc7e",
+        "98b848f70ea7028b096e012262a496a611ec82ce3cd940c59b1b4e97b94828bd",
+        "ceb8e2dfe2938e302221326c753541b07ba5eeb5e8ece5fed5b4ce5ff3e92620",
+        "41250755b29cc850ab6dd17d84823a07f2f933e4a09737c08a9d84d5121eba47"
+      ],
+      "seconds": 29.59,
+      "usage": {
+        "input_tokens": 71270,
+        "cached_input_tokens": 65280,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 814,
+        "reasoning_output_tokens": 38
+      },
+      "grade": {
+        "operation": "summary",
+        "policy": "canonical",
+        "passed": 16,
+        "total": 16,
+        "success": true,
+        "cases": [
+          {
+            "case": 0,
+            "passed": true
+          },
+          {
+            "case": 1,
+            "passed": true
+          },
+          {
+            "case": 2,
+            "passed": true
+          },
+          {
+            "case": 3,
+            "passed": true
+          },
+          {
+            "case": 4,
+            "passed": true
+          },
+          {
+            "case": 5,
+            "passed": true
+          },
+          {
+            "case": 6,
+            "passed": true
+          },
+          {
+            "case": 7,
+            "passed": true
+          },
+          {
+            "case": 8,
+            "passed": true
+          },
+          {
+            "case": 9,
+            "passed": true
+          },
+          {
+            "case": 10,
+            "passed": true
+          },
+          {
+            "case": 11,
+            "passed": true
+          },
+          {
+            "case": 12,
+            "passed": true
+          },
+          {
+            "case": 13,
+            "passed": true
+          },
+          {
+            "case": 14,
+            "passed": true
+          },
+          {
+            "case": 15,
+            "passed": true
+          }
+        ]
+      },
+      "integrity": true,
+      "success": true
+    },
+    {
+      "id": "9d9f251b75fb4ace807d9fd6c02dc77b",
+      "task": "export",
+      "repeat": 0,
+      "arm": "notes_and_skill",
+      "prompt_sha256": "e1e8321cbe05a59709b5275e3328fa3755c18ae87cb86243bc06c65b7341d1e2",
+      "memory_ids": [
+        "f71a249b7e1050bb9f342fe20b0d81356046890da042045c529f069de650bc7e",
+        "98b848f70ea7028b096e012262a496a611ec82ce3cd940c59b1b4e97b94828bd",
+        "ceb8e2dfe2938e302221326c753541b07ba5eeb5e8ece5fed5b4ce5ff3e92620",
+        "41250755b29cc850ab6dd17d84823a07f2f933e4a09737c08a9d84d5121eba47"
+      ],
+      "seconds": 30.32,
+      "usage": {
+        "input_tokens": 71526,
+        "cached_input_tokens": 52224,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1008,
+        "reasoning_output_tokens": 140
+      },
+      "grade": {
+        "operation": "export",
+        "policy": "canonical",
+        "passed": 16,
+        "total": 16,
+        "success": true,
+        "cases": [
+          {
+            "case": 0,
+            "passed": true
+          },
+          {
+            "case": 1,
+            "passed": true
+          },
+          {
+            "case": 2,
+            "passed": true
+          },
+          {
+            "case": 3,
+            "passed": true
+          },
+          {
+            "case": 4,
+            "passed": true
+          },
+          {
+            "case": 5,
+            "passed": true
+          },
+          {
+            "case": 6,
+            "passed": true
+          },
+          {
+            "case": 7,
+            "passed": true
+          },
+          {
+            "case": 8,
+            "passed": true
+          },
+          {
+            "case": 9,
+            "passed": true
+          },
+          {
+            "case": 10,
+            "passed": true
+          },
+          {
+            "case": 11,
+            "passed": true
+          },
+          {
+            "case": 12,
+            "passed": true
+          },
+          {
+            "case": 13,
+            "passed": true
+          },
+          {
+            "case": 14,
+            "passed": true
+          },
+          {
+            "case": 15,
+            "passed": true
+          }
+        ]
+      },
+      "integrity": true,
+      "success": true
+    },
+    {
+      "id": "f39713d4d22b44119b7883243e85059b",
+      "task": "summary",
+      "repeat": 0,
+      "arm": "notes_and_skill",
+      "prompt_sha256": "8e76ea0a30eeccbaf1da4f86fd7d29946fb65c3721e2afd52aa33231b5d00557",
+      "memory_ids": [
+        "f71a249b7e1050bb9f342fe20b0d81356046890da042045c529f069de650bc7e",
+        "98b848f70ea7028b096e012262a496a611ec82ce3cd940c59b1b4e97b94828bd",
+        "ceb8e2dfe2938e302221326c753541b07ba5eeb5e8ece5fed5b4ce5ff3e92620",
+        "41250755b29cc850ab6dd17d84823a07f2f933e4a09737c08a9d84d5121eba47"
+      ],
+      "seconds": 32.89,
+      "usage": {
+        "input_tokens": 71082,
+        "cached_input_tokens": 51968,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 811,
+        "reasoning_output_tokens": 70
+      },
+      "grade": {
+        "operation": "summary",
+        "policy": "canonical",
+        "passed": 16,
+        "total": 16,
+        "success": true,
+        "cases": [
+          {
+            "case": 0,
+            "passed": true
+          },
+          {
+            "case": 1,
+            "passed": true
+          },
+          {
+            "case": 2,
+            "passed": true
+          },
+          {
+            "case": 3,
+            "passed": true
+          },
+          {
+            "case": 4,
+            "passed": true
+          },
+          {
+            "case": 5,
+            "passed": true
+          },
+          {
+            "case": 6,
+            "passed": true
+          },
+          {
+            "case": 7,
+            "passed": true
+          },
+          {
+            "case": 8,
+            "passed": true
+          },
+          {
+            "case": 9,
+            "passed": true
+          },
+          {
+            "case": 10,
+            "passed": true
+          },
+          {
+            "case": 11,
+            "passed": true
+          },
+          {
+            "case": 12,
+            "passed": true
+          },
+          {
+            "case": 13,
+            "passed": true
+          },
+          {
+            "case": 14,
+            "passed": true
+          },
+          {
+            "case": 15,
+            "passed": true
+          }
+        ]
+      },
+      "integrity": true,
+      "success": true
+    },
+    {
+      "id": "490043469087471f8a0141f93ad86e61",
+      "task": "summary",
+      "repeat": 1,
+      "arm": "current_notes",
+      "prompt_sha256": "96a6f67198738ab31fcdbaf0da3262531e559dd2273aced1d6e7e66a13278ec0",
+      "memory_ids": [
+        "f71a249b7e1050bb9f342fe20b0d81356046890da042045c529f069de650bc7e",
+        "ceb8e2dfe2938e302221326c753541b07ba5eeb5e8ece5fed5b4ce5ff3e92620",
+        "41250755b29cc850ab6dd17d84823a07f2f933e4a09737c08a9d84d5121eba47"
+      ],
+      "seconds": 30.74,
+      "usage": {
+        "input_tokens": 89510,
+        "cached_input_tokens": 69760,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1092,
+        "reasoning_output_tokens": 159
+      },
+      "grade": {
+        "operation": "summary",
+        "policy": "canonical",
+        "passed": 16,
+        "total": 16,
+        "success": true,
+        "cases": [
+          {
+            "case": 0,
+            "passed": true
+          },
+          {
+            "case": 1,
+            "passed": true
+          },
+          {
+            "case": 2,
+            "passed": true
+          },
+          {
+            "case": 3,
+            "passed": true
+          },
+          {
+            "case": 4,
+            "passed": true
+          },
+          {
+            "case": 5,
+            "passed": true
+          },
+          {
+            "case": 6,
+            "passed": true
+          },
+          {
+            "case": 7,
+            "passed": true
+          },
+          {
+            "case": 8,
+            "passed": true
+          },
+          {
+            "case": 9,
+            "passed": true
+          },
+          {
+            "case": 10,
+            "passed": true
+          },
+          {
+            "case": 11,
+            "passed": true
+          },
+          {
+            "case": 12,
+            "passed": true
+          },
+          {
+            "case": 13,
+            "passed": true
+          },
+          {
+            "case": 14,
+            "passed": true
+          },
+          {
+            "case": 15,
+            "passed": true
+          }
+        ]
+      },
+      "integrity": true,
+      "success": true
+    },
+    {
+      "id": "3fe78576251c4ad9958d99d3bffb548a",
+      "task": "summary",
+      "repeat": 1,
+      "arm": "notes_and_skill",
+      "prompt_sha256": "8e76ea0a30eeccbaf1da4f86fd7d29946fb65c3721e2afd52aa33231b5d00557",
+      "memory_ids": [
+        "f71a249b7e1050bb9f342fe20b0d81356046890da042045c529f069de650bc7e",
+        "98b848f70ea7028b096e012262a496a611ec82ce3cd940c59b1b4e97b94828bd",
+        "ceb8e2dfe2938e302221326c753541b07ba5eeb5e8ece5fed5b4ce5ff3e92620",
+        "41250755b29cc850ab6dd17d84823a07f2f933e4a09737c08a9d84d5121eba47"
+      ],
+      "seconds": 32.06,
+      "usage": {
+        "input_tokens": 71159,
+        "cached_input_tokens": 65280,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 984,
+        "reasoning_output_tokens": 140
+      },
+      "grade": {
+        "operation": "summary",
+        "policy": "canonical",
+        "passed": 16,
+        "total": 16,
+        "success": true,
+        "cases": [
+          {
+            "case": 0,
+            "passed": true
+          },
+          {
+            "case": 1,
+            "passed": true
+          },
+          {
+            "case": 2,
+            "passed": true
+          },
+          {
+            "case": 3,
+            "passed": true
+          },
+          {
+            "case": 4,
+            "passed": true
+          },
+          {
+            "case": 5,
+            "passed": true
+          },
+          {
+            "case": 6,
+            "passed": true
+          },
+          {
+            "case": 7,
+            "passed": true
+          },
+          {
+            "case": 8,
+            "passed": true
+          },
+          {
+            "case": 9,
+            "passed": true
+          },
+          {
+            "case": 10,
+            "passed": true
+          },
+          {
+            "case": 11,
+            "passed": true
+          },
+          {
+            "case": 12,
+            "passed": true
+          },
+          {
+            "case": 13,
+            "passed": true
+          },
+          {
+            "case": 14,
+            "passed": true
+          },
+          {
+            "case": 15,
+            "passed": true
+          }
+        ]
+      },
+      "integrity": true,
+      "success": true
+    },
+    {
+      "id": "62bbbcaecc7a4c8797fbf573805ac2f4",
+      "task": "export",
+      "repeat": 0,
+      "arm": "no_memory",
+      "prompt_sha256": "9e55e0dc71d62e8dbc403ff91125d6d2303739e4230cc8304b2e381904184278",
+      "memory_ids": [],
+      "seconds": 29.54,
+      "usage": {
+        "input_tokens": 102676,
+        "cached_input_tokens": 97408,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 537,
+        "reasoning_output_tokens": 192
+      },
+      "grade": {
+        "operation": "export",
+        "policy": "canonical",
+        "passed": 0,
+        "total": 16,
+        "success": false,
+        "cases": [
+          {
+            "case": 0,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 1,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 2,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 3,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 4,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 5,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 6,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 7,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 8,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 9,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 10,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 11,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 12,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 13,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 14,
+            "passed": false,
+            "error": "NotImplementedError"
+          },
+          {
+            "case": 15,
+            "passed": false,
+            "error": "NotImplementedError"
+          }
+        ]
+      },
+      "integrity": true,
+      "success": false
+    },
+    {
+      "id": "2af29f03e86941c5802f78d080ea5e21",
+      "task": "export",
+      "repeat": 1,
+      "arm": "current_notes",
+      "prompt_sha256": "89c7d904c7d3dd719f2b2e1bb64141c78129c001b5ea3f4e186776790eb063e4",
+      "memory_ids": [
+        "f71a249b7e1050bb9f342fe20b0d81356046890da042045c529f069de650bc7e",
+        "ceb8e2dfe2938e302221326c753541b07ba5eeb5e8ece5fed5b4ce5ff3e92620",
+        "41250755b29cc850ab6dd17d84823a07f2f933e4a09737c08a9d84d5121eba47"
+      ],
+      "seconds": 23.73,
+      "usage": {
+        "input_tokens": 70889,
+        "cached_input_tokens": 65024,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 866,
+        "reasoning_output_tokens": 60
+      },
+      "grade": {
+        "operation": "export",
+        "policy": "canonical",
+        "passed": 16,
+        "total": 16,
+        "success": true,
+        "cases": [
+          {
+            "case": 0,
+            "passed": true
+          },
+          {
+            "case": 1,
+            "passed": true
+          },
+          {
+            "case": 2,
+            "passed": true
+          },
+          {
+            "case": 3,
+            "passed": true
+          },
+          {
+            "case": 4,
+            "passed": true
+          },
+          {
+            "case": 5,
+            "passed": true
+          },
+          {
+            "case": 6,
+            "passed": true
+          },
+          {
+            "case": 7,
+            "passed": true
+          },
+          {
+            "case": 8,
+            "passed": true
+          },
+          {
+            "case": 9,
+            "passed": true
+          },
+          {
+            "case": 10,
+            "passed": true
+          },
+          {
+            "case": 11,
+            "passed": true
+          },
+          {
+            "case": 12,
+            "passed": true
+          },
+          {
+            "case": 13,
+            "passed": true
+          },
+          {
+            "case": 14,
+            "passed": true
+          },
+          {
+            "case": 15,
+            "passed": true
+          }
+        ]
+      },
+      "integrity": true,
+      "success": true
+    },
+    {
+      "id": "afdbbf78f0b84c6db9db32faa3fb0a02",
+      "task": "export",
+      "repeat": 2,
+      "arm": "current_notes",
+      "prompt_sha256": "89c7d904c7d3dd719f2b2e1bb64141c78129c001b5ea3f4e186776790eb063e4",
+      "memory_ids": [
+        "f71a249b7e1050bb9f342fe20b0d81356046890da042045c529f069de650bc7e",
+        "ceb8e2dfe2938e302221326c753541b07ba5eeb5e8ece5fed5b4ce5ff3e92620",
+        "41250755b29cc850ab6dd17d84823a07f2f933e4a09737c08a9d84d5121eba47"
+      ],
+      "seconds": 36.49,
+      "usage": {
+        "input_tokens": 89977,
+        "cached_input_tokens": 70272,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1196,
+        "reasoning_output_tokens": 81
+      },
+      "grade": {
+        "operation": "export",
+        "policy": "canonical",
+        "passed": 16,
+        "total": 16,
+        "success": true,
+        "cases": [
+          {
+            "case": 0,
+            "passed": true
+          },
+          {
+            "case": 1,
+            "passed": true
+          },
+          {
+            "case": 2,
+            "passed": true
+          },
+          {
+            "case": 3,
+            "passed": true
+          },
+          {
+            "case": 4,
+            "passed": true
+          },
+          {
+            "case": 5,
+            "passed": true
+          },
+          {
+            "case": 6,
+            "passed": true
+          },
+          {
+            "case": 7,
+            "passed": true
+          },
+          {
+            "case": 8,
+            "passed": true
+          },
+          {
+            "case": 9,
+            "passed": true
+          },
+          {
+            "case": 10,
+            "passed": true
+          },
+          {
+            "case": 11,
+            "passed": true
+          },
+          {
+            "case": 12,
+            "passed": true
+          },
+          {
+            "case": 13,
+            "passed": true
+          },
+          {
+            "case": 14,
+            "passed": true
+          },
+          {
+            "case": 15,
+            "passed": true
+          }
+        ]
+      },
+      "integrity": true,
+      "success": true
+    }
+  ]
+}

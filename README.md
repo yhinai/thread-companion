@@ -1,14 +1,16 @@
 # Thread Companion
 
-An Obsidian companion that carries your goals into coding-agent work, runs experiments, and retains evidence-backed review procedures.
+Keep coding agents aligned with changing project decisions. Thread connects authored intent in Obsidian to verified Codex experiments and durable evidence in MongoDB Atlas.
 
 **[Product and architecture](docs/PRODUCT.md)** · **[Learning proof and judging demo](docs/DEMO.md)** · **[Implementation contributions](docs/CONTRIBUTIONS.md)**
 
-This is a first local implementation. Codex is the first adapter; Claude Code is planned. Atlas ping/read/write and a real Codex implementation/check/review/learning run have passed. All 24 automated tests pass, including localhost integration. The plugin was verified in Obsidian 1.14.4 against the Atlas proof project: panel, Brief, linked run note, and Evidence dialog. The automated tests use a clearly identified deterministic agent double; live proof results are recorded separately.
+This is a working local prototype. Codex is the first adapter; Claude Code is planned. Atlas ping/read/write and a real Codex implementation/check/review/learning run have passed. All 26 automated tests pass, including localhost integration and withholding promotion when authored intent changes during an experiment. The plugin was verified in Obsidian 1.14.4 against the Atlas proof project: panel, readable Brief, linked run note, and Evidence dialog. The automated tests use a clearly identified deterministic agent double; live proof results are recorded separately.
 
 The live learning task improved from **11/16 to 16/16** fixed checks. The 18 fresh-session transfer trials passed **6/6 in every condition**, so this fixture did **not** demonstrate an incremental procedural-memory benefit. See the [measured transfer report](docs/evidence/transfer-report.md) and [structured proof evidence](docs/evidence/proof-results.json).
 
-Watch the [one-minute narrated evidence replay](docs/evidence/thread-demo.mp4), with [captions](docs/evidence/thread-demo.vtt). It shows the recorded results and predates the completed Obsidian verification. See the [actual Obsidian screenshot](docs/evidence/obsidian-proof.png).
+The follow-up removes that shared implementation and Git history. Across **18 additional fresh sessions**, no memory passed **0/6**, current notes **6/6**, and notes plus learned procedure **6/6**. This demonstrates access to authored requirements in this fixture; it still does not establish an incremental skill benefit. The [frozen protocol](docs/evidence/isolated-protocol.md), [full report](docs/evidence/isolated-report.md), and [trial results](docs/evidence/isolated-results.json) include failures, integrity checks, time, and token use.
+
+Watch the [one-minute Obsidian walkthrough](docs/evidence/thread-obsidian-demo.mp4), with [captions](docs/evidence/thread-obsidian-demo.vtt). It uses authentic app screenshots and synthetic narration, showing current decisions, stale-procedure exclusion, checked learning, readable briefs, and measured results. [Actual screenshot](docs/evidence/obsidian-proof.png). The [earlier evidence replay](docs/evidence/thread-demo.mp4) is preserved as an archive.
 
 ## Start locally
 
