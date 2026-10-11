@@ -150,15 +150,17 @@ class ThreadView extends ItemView {
       const card = this.body.createDiv({ cls: 'thread-card' });
       card.createDiv({ text: 'TRANSFER EVIDENCE', cls: 'thread-eyebrow' });
       card.createEl('p', { text: `Comparison ${evaluation.status} · ${evaluation.adapter}` });
+      card.createEl('small', { text: evaluation.fixture === 'isolated_unimplemented' ? 'Fresh repository · no prior implementation' : 'Shared corrected implementation', cls: 'thread-muted' });
       const table = card.createEl('table', { cls: 'thread-results' });
       const header = table.createEl('thead').createEl('tr');
-      for (const label of ['Context', 'Passed']) header.createEl('th', { text: label });
+      for (const label of ['Context', 'Passed', 'Seconds']) header.createEl('th', { text: label });
       const body = table.createEl('tbody');
       for (const [arm, label] of [['no_memory', 'No memory'], ['current_notes', 'Current notes'], ['notes_and_skill', 'Notes + learned skill']]) {
         const trials = evaluation.trials.filter(t => t.arm === arm);
         const row = body.createEl('tr');
         row.createEl('td', { text: label });
         row.createEl('td', { text: `${trials.filter(t => t.success).length}/${trials.length}` });
+        row.createEl('td', { text: `${Math.round(trials.reduce((sum, t) => sum + (t.seconds || 0), 0))}` });
       }
       card.createEl('p', { text: 'Compare current notes with notes + skill. Equal results do not demonstrate a learning benefit. Small custom test; time and token use may differ.', cls: 'thread-muted' });
       if (evaluation.error) card.createEl('p', { text: evaluation.error, cls: 'thread-error' });
@@ -183,8 +185,13 @@ class ThreadView extends ItemView {
     top.createEl('span', { text: run.phase.replaceAll('_', ' '), cls: `thread-status is-${run.status}` });
     top.createEl('small', { text: `${run.continuous ? 'Continuous · ' : ''}Cycle ${run.cycle}` });
     card.createEl('h4', { text: run.task.slice(0, 160) });
-    card.createEl('p', { text: run.summary.slice(0, 600), cls: 'thread-run-summary' });
+    let summary = run.summary;
+    if (run.mode === 'brief' && !run.brief) {
+      try { const context = JSON.parse(summary); summary = `Prepared a brief from ${context.memories.length} current memories. No coding agent started.`; } catch (_) { /* Older text summaries remain readable. */ }
+    }
+    card.createEl('p', { text: summary.slice(0, 600), cls: 'thread-run-summary' });
     const actions = card.createDiv({ cls: 'thread-inline-actions' });
+    if (run.brief) button(actions, 'Copy brief', async () => { await navigator.clipboard.writeText(run.brief); new Notice('Brief copied.'); });
     if (['queued', 'running', 'stopping'].includes(run.status)) {
       button(actions, 'Stop', () => this.plugin.api(`/runs/${run.id}/stop`, {}));
     } else if (['waiting', 'interrupted', 'failed', 'stopped', 'dead_end'].includes(run.status)) {
@@ -245,7 +252,27 @@ class EvidenceModal extends Modal {
   constructor(app, events) { super(app); this.events = events; }
   onOpen() {
     this.titleEl.setText('Why Thread acted');
+    this.modalEl.addClass('thread-evidence-modal');
+    for (const event of this.events.filter(e => Array.isArray(e.checks))) {
+      for (const check of event.checks) {
+        let result;
+        try { result = JSON.parse(check.stdout); } catch (_) { result = null; }
+        if (result && Number.isInteger(result.passed) && Number.isInteger(result.total)) {
+          this.contentEl.createEl('h3', { text: `${result.passed}/${result.total} acceptance checks · ${check.exit_code === 0 ? 'passed' : 'failed'}` });
+        }
+      }
+    }
     for (const event of this.events) {
+      if (event.type === 'context.compiled' && event.context) {
+        this.contentEl.createEl('p', { text: `${event.context.selected.length} memories selected for this task. Outdated procedures are excluded.` });
+        for (const item of event.context.selected) {
+          const memory = item.memory;
+          const card = this.contentEl.createDiv({ cls: 'thread-memory-row' });
+          card.createEl('strong', { text: memory.title });
+          card.createEl('small', { text: `${memory.kind} · v${memory.version} · ${memory.source}` });
+          card.createEl('p', { text: item.reasons.join(' · ') });
+        }
+      }
       const section = this.contentEl.createEl('details', { cls: 'thread-evidence' });
       section.createEl('summary', { text: event.message || event.type });
       section.createEl('pre', { text: JSON.stringify(event, null, 2) });

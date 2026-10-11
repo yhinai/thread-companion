@@ -9,7 +9,8 @@ from companion.engine import Engine
 from companion.evaluation import TransferEvaluation, arm_context, render_report, summarize
 from companion.gitops import head
 from companion.memory import Memory
-from companion.proof import prepare, change_decision
+from companion.proof import prepare, change_decision, isolated_transfer_project
+from companion.gitops import git
 from companion.store import SQLiteStore
 from companion.grading import grade
 
@@ -64,6 +65,18 @@ class ProofTests(unittest.TestCase):
         self.assertFalse(any(x["memory"]["kind"] == "skill" for x in notes["selected"]))
         self.assertTrue(any(x["memory"]["kind"] == "skill" for x in context["selected"]))
         self.assertEqual(arm_context(context, "no_memory")["selected"], [])
+
+    def test_isolated_transfer_has_no_implementation_or_history_to_leak(self):
+        project, base = isolated_transfer_project(self.project, self.root)
+        source = (Path(project["repo"]) / "tasks.py").read_text()
+        self.assertNotIn("active_tasks", source)
+        self.assertNotIn("truthiness", source)
+        self.assertNotIn('"false"', source)
+        self.assertEqual(git(project["repo"], "rev-list", "--count", base).strip(), "1")
+        self.assertEqual(project["id"], self.project["id"])
+        self.assertEqual(self.engine.project(project["id"])["repo"], self.project["repo"])
+        with self.assertRaises(ValueError):
+            isolated_transfer_project(self.project, self.root)
 
     def test_measured_failures_are_not_reported_as_improvement(self):
         evaluation = TransferEvaluation(self.engine).run(self.project, head(self.project["repo"]), threading.Event(), repeats=1)

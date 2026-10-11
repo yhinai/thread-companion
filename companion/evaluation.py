@@ -39,7 +39,7 @@ class TransferEvaluation:
         self.store = engine.store
         self.grader = Path(__file__).with_name("grading.py").resolve()
 
-    def run(self, project, base, stop, repeats=3, seed=17, on_trial=None):
+    def run(self, project, base, stop, repeats=3, seed=17, on_trial=None, fixture="shared_implementation"):
         if repeats < 1:
             raise ValueError("At least one repeat required")
         # Freeze knowledge once so a note edit cannot silently change an arm mid-comparison.
@@ -50,7 +50,7 @@ class TransferEvaluation:
         evaluation = self.store.put("evaluations", {"id": identity(), "project_id": project["id"], "status": "running",
             "created_at": now(), "backend": self.store.backend, "adapter": self.engine.adapter.name,
             "model": getattr(self.engine.adapter, "model", None) or "inherited Codex configuration",
-            "base_commit": base, "seed": seed, "repeats": repeats, "grader_sha256": file_hash(self.grader),
+            "base_commit": base, "fixture": fixture, "seed": seed, "repeats": repeats, "grader_sha256": file_hash(self.grader),
             "context": frozen_context, "trials": [], "protocol": "one fresh agent invocation per arm/task/repeat; same repository commit and task prompt; token use measured, not equalized"})
         schedule = [(task, repeat, arm) for task in TASKS for repeat in range(repeats) for arm in ARMS]
         random.Random(seed).shuffle(schedule)
@@ -123,6 +123,7 @@ def render_report(evaluation):
     lines = ["# Thread transfer evaluation", "", "Status: **%s**" % evaluation["status"],
              "Storage: `%s` · Agent: `%s` · Model: `%s`" % (evaluation["backend"], evaluation["adapter"], evaluation["model"]), "",
              "Base commit: `%s`" % evaluation["base_commit"], "Grader: `%s`" % evaluation["grader_sha256"], "",
+             "Fixture: `%s`" % evaluation.get("fixture", "shared_implementation"), "",
              evaluation["protocol"], "", "| Context | Tasks passed | Seconds | Input tokens | Output tokens |", "|---|---:|---:|---:|---:|"]
     for arm, result in evaluation["summary"].items():
         lines.append("| %s | %d/%d | %s | %d | %d |" % (arm, result["passed"], result["total"], result["seconds"], result["input_tokens"], result["output_tokens"]))

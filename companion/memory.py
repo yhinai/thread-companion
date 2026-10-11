@@ -205,3 +205,18 @@ def render_context(context):
         {"id": x["memory"]["id"], "kind": x["memory"]["kind"], "title": x["memory"]["title"],
          "content": x["memory"]["content"], "version": x["memory"]["version"], "why": x["reasons"]}
         for x in context["selected"]]}, ensure_ascii=False, indent=2)
+
+
+def render_brief(context):
+    """Readable vault artifact; the structured context remains in the run evidence."""
+    lines = ["## Goal", context["goal"], "", "## Task", context["task"], "", "## Selected context"]
+    for item in context["selected"]:
+        memory = item["memory"]
+        lines += ["", "### " + memory["title"],
+                  "%s · version %s" % (memory["kind"], memory["version"]), "", memory["content"], "",
+                  "Selected because: " + "; ".join(item["reasons"])]
+        source = memory.get("source", "")
+        if source.endswith(".md"):
+            lines.append("Source: [[%s]]" % source[:-3])
+    lines += ["", "Prepared context only. No coding agent was started."]
+    return "\n".join(lines)

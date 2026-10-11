@@ -28,6 +28,7 @@
 .thread-footer { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
 .thread-empty { padding: 24px 0; color: var(--text-muted); line-height: 1.7; }
 .thread-evidence { margin: 12px 0; }
+.thread-evidence-modal { width: min(760px, 90vw); }
 .thread-results { width: 100%; font-size: 12px; border-collapse: collapse; }
 .thread-results th, .thread-results td { text-align: left; padding: 8px 4px; border-bottom: 1px solid var(--background-modifier-border); }
 .thread-evidence pre { white-space: pre-wrap; word-break: break-word; max-height: 500px; overflow: auto; font-size: 11px; }

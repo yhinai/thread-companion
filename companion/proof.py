@@ -183,9 +183,30 @@ def check(root, store, manifest):
         "learning_status": manifest.get("learning_status", "not run")}, indent=2))
 
 
+def isolated_transfer_project(project, root):
+    """A new Git history with no learned implementation for any arm to reuse."""
+    repo = root / "isolated-transfer-repo"
+    if repo.exists():
+        raise ValueError("Isolated fixture already exists; preserve its results instead of overwriting it")
+    repo.mkdir()
+    (repo / "tasks.py").write_text('''"""Task operations. Completion conventions belong to the project decisions."""
+
+def summary(tasks):
+    raise NotImplementedError("Implement task summary")
+
+def export_active(tasks):
+    raise NotImplementedError("Implement CSV export")
+''')
+    (repo / ".gitignore").write_text("__pycache__/\n*.pyc\n")
+    git(repo, "init", "-b", "main")
+    git(repo, "add", ".")
+    git(repo, "-c", "user.name=Thread Demo", "-c", "user.email=demo@localhost", "commit", "-m", "Unimplemented transfer operations; no policy or prior implementation")
+    return {**project, "repo": str(repo)}, head(repo)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("action", choices=["prepare", "change-decision", "learn", "evaluate", "check"])
+    parser.add_argument("action", choices=["prepare", "change-decision", "learn", "evaluate", "evaluate-isolated", "check"])
     parser.add_argument("--root", default=".thread/proof")
     parser.add_argument("--require-atlas", action="store_true")
     parser.add_argument("--model", help="Explicit Codex model for reproducible comparisons; otherwise inherit CLI configuration")
@@ -221,8 +242,12 @@ def main():
             if not manifest.get("transfer_base"):
                 raise ValueError("Complete a real learning run before evaluating transfer")
             engine = Engine(store, root / "runtime", CodexAdapter(root / "runtime", model=args.model))
-            result = TransferEvaluation(engine).run(engine.project(manifest["project_id"]), manifest["transfer_base"], stop,
-                repeats=args.repeats, on_trial=lambda trial: print("%s / %s / %s: %s" % (trial["task"], trial["arm"], trial["repeat"], "PASS" if trial["success"] else "FAIL"), flush=True))
+            project, base = engine.project(manifest["project_id"]), manifest["transfer_base"]
+            if args.action == "evaluate-isolated":
+                project, base = isolated_transfer_project(project, root)
+            result = TransferEvaluation(engine).run(project, base, stop,
+                repeats=args.repeats, fixture="isolated_unimplemented" if args.action == "evaluate-isolated" else "shared_implementation",
+                on_trial=lambda trial: print("%s / %s / %s: %s" % (trial["task"], trial["arm"], trial["repeat"], "PASS" if trial["success"] else "FAIL"), flush=True))
             print(json.dumps(result["summary"], indent=2))
             print("Report:", root / "runtime" / "evaluations" / result["id"] / "report.md")
     except (RuntimeError, ValueError, FileNotFoundError) as exc:

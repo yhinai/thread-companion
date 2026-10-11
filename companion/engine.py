@@ -133,7 +133,10 @@ class Engine:
                 context = self.memory.compile(project, run["task"])
                 self.emit(run, "context.compiled", "Selected %d relevant memories" % len(context["selected"]), context=context)
                 if run["mode"] == "brief":
-                    self.save(run, status="complete", phase="complete", summary=render_context(context))
+                    from .memory import render_brief
+                    self.save(run, status="complete", phase="complete",
+                              summary="Prepared a brief from %d current memories. No coding agent started." % len(context["selected"]),
+                              brief=render_brief(context))
                     break
                 if run["mode"] == "review":
                     baseline = self.check(project, project["repo"], stop)
@@ -282,7 +285,7 @@ class Engine:
         folder.mkdir(parents=True, exist_ok=True)
         experiments = self.store.list("experiments", run_id=run["id"])
         text = "# " + run["task"].replace("\n", " ")[:120] + "\n\n"
-        text += "Status: **%s** · Cycles: %s\n\n%s\n\n" % (run["status"], run["cycle"], run["summary"])
+        text += "Status: **%s** · Cycles: %s\n\n%s\n\n" % (run["status"], run["cycle"], run.get("brief", run["summary"]))
         for exp in experiments:
             text += "## " + exp["title"] + "\n\n" + exp["hypothesis"] + "\n\n"
             text += "Applied: %s · Branch: `%s`\n\n" % (exp["applied"], exp["worktree"]["branch"])

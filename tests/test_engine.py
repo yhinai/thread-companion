@@ -98,6 +98,12 @@ class EngineTests(unittest.TestCase):
         run = self.run_and_wait("brief")
         self.assertEqual(run["status"], "complete")
         self.assertEqual(self.adapter.calls, [])
+        note = (self.vault / "Thread" / "Runs" / (run["id"] + ".md")).read_text()
+        self.assertIn("## Selected context", note)
+        self.assertIn("[[Goal]]", note)
+        self.assertIn("Selected because:", note)
+        self.assertNotIn('"memories":', note)
+        self.assertIn("No coding agent", run["summary"])
 
     def test_question_answer_becomes_retrievable_decision(self):
         self.adapter.waiting = True
