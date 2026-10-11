@@ -6,6 +6,7 @@ __pycache__/
 .env.*
 !.env.example
 .DS_Store
+/.obsidian/
 # Private conversation records stay in the local workspace.
 /SESSION_HANDOFF.md
 /PROJECT_PLAN.md

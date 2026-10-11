@@ -105,6 +105,21 @@ class EngineTests(unittest.TestCase):
         self.assertNotIn('"memories":', note)
         self.assertIn("No coding agent", run["summary"])
 
+    def test_changed_intent_during_work_prevents_promotion(self):
+        original_call = self.adapter.call
+        def change_intent(phase, *args, **kwargs):
+            result = original_call(phase, *args, **kwargs)
+            if phase == "work":
+                (self.vault / "Goal.md").write_text('---\ntype: goal\n---\n# Task state\nKeep the original truthiness contract; do not normalize strings.')
+            return result
+        self.adapter.call = change_intent
+        run = self.run_and_wait("build")
+        self.assertEqual(run["status"], "waiting", run["summary"])
+        self.assertIn("bool(value)", (self.repo / "task.py").read_text())
+        self.assertFalse(any(e["applied"] for e in self.store.list("experiments")))
+        self.assertFalse(any(m["kind"] == "skill" for m in self.store.list("memories")))
+        self.assertIn("Source decisions changed", run["summary"])
+
     def test_question_answer_becomes_retrievable_decision(self):
         self.adapter.waiting = True
         run = self.run_and_wait(continuous=True)
