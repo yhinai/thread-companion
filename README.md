@@ -4,11 +4,11 @@ An Obsidian companion that carries your goals into coding-agent work, runs exper
 
 **[Product and architecture](docs/PRODUCT.md)** · **[Learning proof and judging demo](docs/DEMO.md)** · **[Implementation contributions](docs/CONTRIBUTIONS.md)**
 
-This is a first local implementation. Codex is the first adapter; Claude Code is planned. Atlas ping/read/write and a real Codex implementation/check/review/learning run have passed. All 24 automated tests pass, including localhost integration. Obsidian is installed and the plugin is configured in the proof vault; visual UI validation remains incomplete. The automated tests use a clearly identified deterministic agent double; live proof results are recorded separately.
+This is a first local implementation. Codex is the first adapter; Claude Code is planned. Atlas ping/read/write and a real Codex implementation/check/review/learning run have passed. All 24 automated tests pass, including localhost integration. The plugin was verified in Obsidian 1.14.4 against the Atlas proof project: panel, Brief, linked run note, and Evidence dialog. The automated tests use a clearly identified deterministic agent double; live proof results are recorded separately.
 
 The live learning task improved from **11/16 to 16/16** fixed checks. The 18 fresh-session transfer trials passed **6/6 in every condition**, so this fixture did **not** demonstrate an incremental procedural-memory benefit. See the [measured transfer report](docs/evidence/transfer-report.md) and [structured proof evidence](docs/evidence/proof-results.json).
 
-Watch the [one-minute narrated evidence replay](docs/evidence/thread-demo.mp4), with [captions](docs/evidence/thread-demo.vtt). It shows the recorded results; Obsidian visual testing remains incomplete.
+Watch the [one-minute narrated evidence replay](docs/evidence/thread-demo.mp4), with [captions](docs/evidence/thread-demo.vtt). It shows the recorded results and predates the completed Obsidian verification. See the [actual Obsidian screenshot](docs/evidence/obsidian-proof.png).
 
 ## Start locally
 

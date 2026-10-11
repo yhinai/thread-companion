@@ -44,4 +44,4 @@ The seeded historical procedure is demonstration data. A later successful task d
 
 Retrieval is lexical with typed priorities and graph expansion. Semantic ranking, exact-step recovery, automatic continuation after answers, optional automatic-review wiring, and live per-tool streaming remain incomplete. Candidate simplicity is estimated by changed line count. Research sources and model reviews are fallible; the external checks establish only the cases they measure.
 
-Codex is the first adapter. Claude Code is planned. Obsidian visual validation and a submission recording remain separate completion requirements.
+Codex is the first adapter. Claude Code is planned. Obsidian panel, Brief, linked note, and Evidence dialog were visually verified against the Atlas proof project. The one-minute submission recording is an evidence replay; hackathon submission remains pending.

@@ -16,13 +16,13 @@ This is the narrowed hackathon story. A memory graph alone does not demonstrate 
 - All 24 automated tests pass in the receiving local session, including the three localhost integration tests. Tests use explicit agent doubles; they do not establish model performance.
 - The Atlas-backed real Codex learning run completed, passed the external checks, received independent approval, and retained a validated procedure. Its manifest is `.thread/atlas-proof/manifest.json`. Fresh-session transfer evaluation is recorded separately and must be interpreted from its actual report.
 - Atlas ping and a retained diagnostic insert/readback passed on October 11, 2026. The organizer Sandbox configuration remains private in `.env`; the credential-free report is `.thread/atlas-connection.json`.
-- Obsidian 1.14.4 is installed and running. The plugin files and private settings are installed in the proof vault for its existing Atlas project. Application-control requests repeatedly timed out, so visual integration is still unverified.
+- Verified the installed plugin in Obsidian 1.14.4 using its official CLI after native app control timed out. The panel connects to Atlas and displays the existing project, stale procedure exclusion, and all 18 transfer results. Brief completed through the plugin; Open note and Evidence worked; no captured errors. [Actual screenshot](evidence/obsidian-proof.png).
 - The completed real transfer comparison ran 18 fresh sessions. No memory, current notes, and notes plus learned skill each passed 6/6 tasks. This fixture does not establish incremental procedural benefit. The [measured report](evidence/transfer-report.md) includes time and token counts; [structured evidence](evidence/proof-results.json) retains each trial's score and integrity result.
 - A separately started Atlas-backed coordinator retrieved the prior learning run and all 18 trials, excluded the stale procedure, selected the learned one, and completed a Brief with a linked vault note through the authenticated live HTTP API.
 
 ![Completed real learning run persisted in Atlas](evidence/atlas-learning.jpg)
 
-The [one-minute narrated evidence replay](evidence/thread-demo.mp4) summarizes these actual results, with [captions](evidence/thread-demo.vtt). It uses synthetic narration and evidence frames, including the real Atlas screenshot. It is explicitly labeled as an evidence replay and does not present an unverified Obsidian interaction as live footage.
+The [one-minute narrated evidence replay](evidence/thread-demo.mp4) summarizes these actual results, with [captions](evidence/thread-demo.vtt). It uses synthetic narration and evidence frames, including the real Atlas screenshot. It is explicitly labeled as an evidence replay. Its statement about pending Obsidian visual testing reflects the recording time; the subsequent UI verification is documented above.
 
 ## Prerequisites
 
